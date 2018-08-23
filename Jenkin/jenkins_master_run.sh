@@ -1,0 +1,2 @@
+# if network not behind proxy, don't need -e "JAVA_OPTS=-Dhttp.proxyHost=xxxx -Dhttp.proxyPort=xxxx -Dhttps.proxyHost=xxxx -Dhttps.proxyPort=xxxx"
+docker run  -p 10000:8080 --name dxcjenkins -v /opt/maven/settings.xml:/usr/share/maven/conf/settings.xml  -v /var/run/docker.sock:/var/run/docker.sock  -v /etc/localtime:/etc/localtime:ro -v /opt/jenkins_home:/var/jenkins_home -e "JAVA_OPTS=-Dhttp.proxyHost=xxxx -Dhttp.proxyPort=xxxx -Dhttps.proxyHost=xxxx -Dhttps.proxyPort=xxxx" -d  jenkins:master &
