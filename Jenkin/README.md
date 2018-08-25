@@ -1,4 +1,4 @@
-## Jenkins Master and Slave in Docker
+## Jenkins Master and Slave in Docker 
 
 #### Jenkins Master
 
@@ -31,6 +31,7 @@ $ docker build -t jenkins:slave .
 ```
 
 ##### 1、Use Docker cloud in jenkins master to configure jenkins slave.
+
 
 
 
