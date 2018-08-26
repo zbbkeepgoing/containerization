@@ -1,8 +1,8 @@
 FROM openjdk:8-jdk
 
 # if network behind proxy,need add this proxy env
-ENV http_proxy xxxx:xxxx
-ENV https_proxy xxxx:xxxx
+# ENV http_proxy xxxx:xxxx
+# ENV https_proxy xxxx:xxxx
 
 # install some dependencies,maybe someone we don't need,if you find,you can remove it,will resize this master images 
 RUN apt-get update && apt-get install -y --no-install-recommends \
