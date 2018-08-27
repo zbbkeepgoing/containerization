@@ -1,8 +1,8 @@
 FROM openjdk:8-jdk
 
 # if network behind proxy,need add this proxy env
-# ENV http_proxy xxxx:xxxx
-# ENV https_proxy xxxx:xxxx
+ENV http_proxy http://xxxx:xxxx
+ENV https_proxy http://xxxx:xxxx
 
 # install some dependencies,maybe someone we don't need,if you find,you can remove it,will resize this master images 
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -38,7 +38,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # Install NodeJs 10.x , if you don't need, you can remove it,you also can change version 
 RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
-RUN apt-get install nodejs
+RUN apt-get  update && apt-get install -y \
+    nodejs
 
 # Install Python3.7 , if you don't need, you can remove it ,you also can change version
 RUN wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz

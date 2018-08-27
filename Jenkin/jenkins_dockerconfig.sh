@@ -1,3 +1,4 @@
+setenforce 0
 # mkdir jenkins home
 mkdir -p /opt/jenkins_home
 # mkdir maven home , for update setting.xml
