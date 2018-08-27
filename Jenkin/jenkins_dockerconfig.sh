@@ -11,3 +11,4 @@ chgrp -v bbdocker -R /opt/jenkins_home
 chgrp -v bbdocker -R /opt/maven
 chmod  -R 775 /opt/jenkins_home
 chmod  -R 775 /opt/maven
+cp -rf settings.xml /opt/maven

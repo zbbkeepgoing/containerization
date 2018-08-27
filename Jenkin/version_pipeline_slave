@@ -1,0 +1,65 @@
+pipeline {
+    agent { label 'slave' }
+    stages {
+        stage('JDK') {
+            steps {
+               sh "java -version"
+            }
+        }
+		stage('GIT') {
+            steps {
+                sh "git --version"
+            }
+        }
+		stage('Maven') {
+            steps {
+                sh "mvn --version"
+            }
+        }
+		stage('Ant') {
+            steps {
+                sh "ant -version"
+            }
+        }
+		stage('Ruby') {
+            steps {
+                sh "ruby -v"
+            }
+        }
+		stage('Python2') {
+            steps {
+                sh "python -V"
+            }
+        }
+		stage('Python3') {
+            steps {
+                sh "python3 -V"
+            }
+        }
+		stage('PHP') {
+            steps {
+                sh "php -v"
+            }
+        }
+		stage('Nodejs') {
+            steps {
+                sh "npm -v"
+            }
+        }
+		stage('Golang') {
+            steps {
+                sh "go version"
+            }
+        }
+		stage('Dotnet') {
+            steps {
+                sh "dotnet --version"
+            }
+        }
+		stage('Docker') {
+            steps {
+                sh "docker version"
+            }
+        }
+    }
+}
