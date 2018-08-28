@@ -74,11 +74,11 @@ $ ./jenkins_dockerconfig.sh
 
 <img src="https://github.com/zbbkeepgoing/containerization/blob/master/Imgs/jenkins06.jpg" width="800" >
 <img src="https://github.com/zbbkeepgoing/containerization/blob/master/Imgs/jenkins07.jpg" width="800" >
-<img src="https://github.com/zbbkeepgoing/containerization/blob/master/Imgs/jenkins08.jpg" width="800" >
+
 
 #### 4、Run a simple pipeline [version_pipeline_slave] in slave jenkins. 
 
-
+<img src="https://github.com/zbbkeepgoing/containerization/blob/master/Imgs/jenkins08.jpg" width="800" >
 
 
 
