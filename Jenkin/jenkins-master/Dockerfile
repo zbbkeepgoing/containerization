@@ -32,6 +32,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  apt-transport-https \
  libunwind8  \
  gettext \
+ sshpass \
  && rm -rf /var/lib/apt/lists/*
 
 
