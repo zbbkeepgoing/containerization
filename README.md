@@ -19,6 +19,10 @@ in jenkins master.
 
 #### Slave Folder [Jenkins Slave]
 
+## RobotFramework in Docker ###
+
+All file you can find in [RobotFramework] , you can find RobotFramework Dockerfile , this Dockerfile include robotframework、robotframework-seleniumlibrary、robotframework-faker、robotframework-selenium2library. you can build a robotFramework Image to run WEB-UI Automated Testing . if you want use other Automated Testing , this Dockerfile is the base images.
+
 
 
 
@@ -31,3 +35,4 @@ in jenkins master.
 [Jenkins]: https://github.com/zbbkeepgoing/containerization/tree/master/Jenkin
 [Jenkins Master]:https://github.com/zbbkeepgoing/containerization/tree/master/Jenkin/jenkins-master
 [Jenkins Slave]: https://github.com/zbbkeepgoing/containerization/tree/master/Jenkin/jenkins-slave
+[RobotFramework]: https://github.com/zbbkeepgoing/containerization/tree/master/RobotFramework
