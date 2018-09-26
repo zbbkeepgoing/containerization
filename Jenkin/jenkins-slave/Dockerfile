@@ -23,8 +23,8 @@
 FROM openjdk:8-jdk
 
 # if network behind proxy,need add this proxy env
-# ENV http_proxy xxxx:xxxx
-# ENV https_proxy xxxx:xxxx
+ENV http_proxy http://192.168.88.128:8118
+ENV https_proxy http://192.168.88.128:8118
 
 # install some dependencies,maybe someone we don't need,if you find,you can remove it,will resize this master images
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -60,7 +60,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # Install NodeJs 10.x , if you don't need, you can remove it,you also can change version
 RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
-RUN apt-get install nodejs
+RUN apt-get  update && apt-get install -y \
+    nodejs
 
 # Install Python3.7 , if you don't need, you can remove it ,you also can change version
 RUN wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz
@@ -127,16 +128,13 @@ RUN rm -rf dotnet-sdk-2.1.302-linux-x64.tar.gz
 RUN apt-get update && \
     apt-get -y install apt-transport-https \
      ca-certificates \
-     curl \
      gnupg2 \
      software-properties-common && \
-    curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg > /tmp/dkey; apt-key add /tmp/dkey && \
-   add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") \
-   $(lsb_release -cs) \
-   stable" && \
-  apt-get update && \
-  apt-get -y install docker-ce
+    curl -fsSL https://apt.dockerproject.org/gpg | gpg --dearmor > /etc/apt/trusted.gpg.d/yarn.gpg &&\
+    apt-add-repository \
+   "deb https://apt.dockerproject.org/repo debian-$(lsb_release -cs) main"
+RUN apt-get update && \
+    apt-get -y install docker-engine
 
 
 RUN apt-get clean && apt-get autoclean
