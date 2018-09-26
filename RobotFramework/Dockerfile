@@ -23,7 +23,7 @@ RUN pip install --default-timeout=100  --upgrade setuptools
 RUN pip install --default-timeout=100  robotframework
 RUN pip install --default-timeout=100  robotframework-seleniumlibrary
 RUN pip install --default-timeout=100  robotframework-faker
-RUN wget https://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip; \
+RUN wget https://chromedriver.storage.googleapis.com/2.42/chromedriver_linux64.zip; \
     unzip chromedriver_linux64.zip; \
     rm -rf chromedriver_linux64.zip; \
     mv -f chromedriver /usr/local/bin/chromedriver;
