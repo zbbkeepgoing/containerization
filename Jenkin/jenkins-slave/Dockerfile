@@ -23,8 +23,8 @@
 FROM openjdk:8-jdk
 
 # if network behind proxy,need add this proxy env
-ENV http_proxy http://192.168.88.128:8118
-ENV https_proxy http://192.168.88.128:8118
+ENV http_proxy http://192.168.88.130:8118
+ENV https_proxy http://192.168.88.130:8118
 
 # install some dependencies,maybe someone we don't need,if you find,you can remove it,will resize this master images
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -173,3 +173,5 @@ VOLUME /home/${user}/.jenkins
 VOLUME ${AGENT_WORKDIR}
 WORKDIR /home/${user}
 
+ENV http_proxy ""
+ENV https_proxy ""
