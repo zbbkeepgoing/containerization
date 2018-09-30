@@ -1,3 +1,4 @@
 docker-plugin:latest
 robot:1.6.5
 sonar:2.8.1
+performance:3.12

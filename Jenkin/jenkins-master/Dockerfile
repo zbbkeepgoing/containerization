@@ -1,8 +1,8 @@
 FROM openjdk:8-jdk
 
 # if network behind proxy,need add this proxy env
-ENV http_proxy http://xxxx:xxxx
-ENV https_proxy http://xxxx:xxxx
+ENV http_proxy http://192.168.88.128:8118
+ENV https_proxy http://192.168.88.128:8118
 
 # install some dependencies,maybe someone we don't need,if you find,you can remove it,will resize this master images 
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -210,4 +210,5 @@ COPY install-plugins.sh /usr/local/bin/install-plugins.sh
 COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
 RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 
-
+ENV http_proxy ""
+ENV https_proxy ""
