@@ -33,7 +33,7 @@ All file you can find in [Ansible] , you can find Ansible Dockerfile , you can u
 
 ## SonarQube in Docker ###
 
-All file you can find in [SonarQube] , you can find SonarQube Dockerfile .
+All file you can find in [SonarQube] , you can find SonarQube run file .
 
 
 
