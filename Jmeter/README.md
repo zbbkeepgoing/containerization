@@ -17,7 +17,7 @@ $ systemctl restart docker
 
 #### 2、Use Docker cloud in jenkins master to configure jmeter node.
 
-<img src="https://github.com/zbbkeepgoing/containerization/blob/master/Imgs/jmeter13.png" width="800" >
+<img src="https://github.com/zbbkeepgoing/containerization/blob/master/Imgs/jmeter13.jpg" width="800" >
 <img src="https://github.com/zbbkeepgoing/containerization/blob/master/Imgs/jmeter14.jpg" width="800" >
 
 #### 3、Run a simple pipeline [version_pipeline_jmeter] in jmeter node. 
