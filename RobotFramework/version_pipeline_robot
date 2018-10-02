@@ -1,0 +1,11 @@
+pipeline {
+    agent { label 'robot' }   //制定label为robot的agent/node进行执行job
+
+    stages {
+        stage('robot') {
+            steps {
+                sh 'pybot --version;'
+            }
+        }
+    }
+}
