@@ -18,12 +18,12 @@ $ systemctl restart docker
 #### 2、Use Docker cloud in jenkins master to configure robotframework node.
 
 <img src="https://github.com/zbbkeepgoing/containerization/blob/master/Imgs/jenkins09.png" width="800" >
-<img src="https://github.com/zbbkeepgoing/containerization/blob/master/Imgs/jenkins10.png" width="800" >
-<img src="https://github.com/zbbkeepgoing/containerization/blob/master/Imgs/jenkins11.png" width="800" >
+<img src="https://github.com/zbbkeepgoing/containerization/blob/master/Imgs/jenkins10.jpg" width="800" >
+<img src="https://github.com/zbbkeepgoing/containerization/blob/master/Imgs/jenkins11.jpg" width="800" >
 
 #### 3、Run a simple pipeline [version_pipeline_robot] in robotframework node. 
 
-<img src="https://github.com/zbbkeepgoing/containerization/blob/master/Imgs/jenkins12.png" width="800" >
+<img src="https://github.com/zbbkeepgoing/containerization/blob/master/Imgs/jenkins12.jpg" width="800" >
 
 
 
