@@ -1,0 +1,10 @@
+pipeline {
+    agent { node { label 'jmeter' } }
+    stages {
+        stage('jmeter') {
+            steps {
+                sh 'jmeter.sh --help;'
+            }
+        }
+    }
+}
