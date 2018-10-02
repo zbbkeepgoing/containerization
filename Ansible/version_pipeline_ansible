@@ -1,0 +1,11 @@
+pipeline {
+    agent { node { label 'ansible' } }
+
+    stages {
+        stage('ansible') {
+            steps {
+                sh 'ansible --help;'
+            }
+        }
+    }
+}
