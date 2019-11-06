@@ -69,7 +69,7 @@ RUN set -eux; \
                         echo >&2; echo >&2 "warning: current architecture ($dpkgArch) does not have a corresponding Go binary release; will be building from source"; echo >&2 ;; \
         esac; \
         \
-        url="https://golang.org/dl/go${GOLANG_VERSION}.${goRelArch}.tar.gz"; \
+        url="https://golang.google.cn/dl/go${GOLANG_VERSION}.${goRelArch}.tar.gz"; \
         wget -O go.tgz "$url"; \
         echo "${goRelSha256} *go.tgz" | sha256sum -c -; \
         tar -C /usr/local -xzf go.tgz; \
