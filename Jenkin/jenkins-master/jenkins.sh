@@ -19,10 +19,6 @@ if [[ $# -lt 1 ]] || [[ "$1" == "--"* ]]; then
     java_opts_array+=( \
       '-Xdebug' \
       '-Xrunjdwp:server=y,transport=dt_socket,address=5005,suspend=y' \
-      '-Dhttp.proxyHost=web-proxy.sgp.hp.com' \
-      '-Dhttp.proxyPort=8080' \
-      '-Dhttps.proxyHost=web-proxy.sgp.hp.com' \
-      '-Dhttps.proxyPort=8080' \
     )
   fi
 
