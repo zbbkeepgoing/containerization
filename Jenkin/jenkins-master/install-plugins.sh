@@ -75,8 +75,7 @@ doDownload() {
     jpi="$(getArchiveFilename "$plugin")"
 
     # If plugin already exists and is the same version do not download
-    # 	if test -f "$jpi" && unzip -p "$jpi" META-INF/MANIFEST.MF | tr -d '\r' | grep "^Plugin-Version: ${version}$" > /dev/null; then
-    if test -f "$jpi" ; then
+    if test -f "$jpi" && unzip -p "$jpi" META-INF/MANIFEST.MF | tr -d '\r' | grep "^Plugin-Version: ${version}$" > /dev/null; then
         echo "Using provided plugin: $plugin"
         return 0
     fi
