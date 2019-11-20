@@ -1,7 +1,7 @@
 FROM centos:centos7
 
-ENV http_proxy http://192.168.88.130:8118
-ENV https_proxy http://192.168.88.130:8118
+# ENV http_proxy http://192.168.88.130:8118
+# ENV https_proxy http://192.168.88.130:8118
 
 RUN yum clean all && \
     yum -y install epel-release && \
