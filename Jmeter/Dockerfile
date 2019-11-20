@@ -1,7 +1,7 @@
 FROM openjdk:8-jdk
 
-ENV http_proxy http://192.168.88.130:8118
-ENV https_proxy https://192.168.88.130:8118
+# ENV http_proxy http://192.168.88.130:8118
+# ENV https_proxy https://192.168.88.130:8118
 
 ENV JMETER_VERSION=5.0
 ENV JMETER_HOME=/usr/local/apache-jmeter-${JMETER_VERSION}
