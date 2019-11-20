@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
-ENV http_proxy http://192.168.88.130:8118
-ENV https_proxy http://192.168.88.130:8118
+# ENV http_proxy http://192.168.88.130:8118
+# ENV https_proxy http://192.168.88.130:8118
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
  python \
