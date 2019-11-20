@@ -10,7 +10,7 @@ echo "-------------------------------------------"
 echo "--------Jenkins Master Running-------------"
 echo "-------------------------------------------"
 echo "docker run jenkins master"
-docker run  -p 10000:8080 --name jenkins -v /opt/maven/settings.xml:/usr/share/maven/conf/settings.xml  -v /var/run/docker.sock:/var/run/docker.sock  -v /etc/localtime:/etc/localtime:ro -v /opt/jenkins_home:/var/jenkins_home -d  jenkins:master &
+docker run  -p 10000:8080 --name jenkins -v /opt/maven/settings.xml:/usr/share/maven/conf/settings.xml  -v /var/run/docker.sock:/var/run/docker.sock  -v /etc/localtime:/etc/localtime:ro -v /opt/jenkins_home:/var/jenkins_home -d  jenkinsmaster:latest &
 
 
 echo "-------------------------------------------"
@@ -21,7 +21,7 @@ echo "sleeping 4s"
 # sleep
 sleep 4s
 echo "docker run jenkins plugin"
-docker run -d --name plugin binbin0126/jenkinsplugin:latest
+docker run -d --name plugin jenkinsplugin:latest
 echo "sleeping 2s"
 sleep 2s
 echo "cp jpi files from docker to hostpath"
