@@ -28,8 +28,8 @@ echo "cp jpi files from docker to hostpath"
 docker cp plugin:/home/plugin.tar.gz /opt/jenkins_home	
 echo "taring.............."
 tar -zxvf /opt/jenkins_home/plugin.tar.gz -C /opt/jenkins_home/plugins
-echo "sleeping 2s"
-sleep 2s
+echo "sleeping 10s"
+sleep 10s
 echo "-------------------------------------------"
 echo "--------Jenkins Master Restarting----------"
 echo "-------------------------------------------"
