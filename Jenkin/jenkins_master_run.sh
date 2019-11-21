@@ -26,10 +26,21 @@ echo "sleeping 2s"
 sleep 2s
 echo "cp jpi files from docker to hostpath"
 docker cp plugin:/home/plugin.tar.gz /opt/jenkins_home	
-echo "taring.............."
+echo "taring begin..........."
 tar -zxvf /opt/jenkins_home/plugin.tar.gz -C /opt/jenkins_home/plugins
-echo "sleeping 10s"
-sleep 10s
+
+count=`ls /opt/jenkins_home/plugins/*.jpi | wc -w`
+echo "plugin number:$count"
+while [ $count -lt 100 ]
+do
+   echo "needing taring again,taring plugin number:$count"
+   tar -zxvf /opt/jenkins_home/plugin.tar.gz -C /opt/jenkins_home/plugins
+   count=`ls /opt/jenkins_home/plugins/*.jpi | wc -w`
+done
+echo "taring end..........."
+
+echo "sleeping 1s"
+sleep 1s
 echo "-------------------------------------------"
 echo "--------Jenkins Master Restarting----------"
 echo "-------------------------------------------"
