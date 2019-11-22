@@ -31,7 +31,7 @@ tar -zxvf /opt/jenkins_home/plugin.tar.gz -C /opt/jenkins_home/plugins
 
 count=`ls /opt/jenkins_home/plugins/*.jpi | wc -w`
 echo "plugin number:$count"
-while [ $count -lt 100 ]
+while [ $count -lt 10 ]
 do
    echo "needing taring again,taring plugin number:$count"
    tar -zxvf /opt/jenkins_home/plugin.tar.gz -C /opt/jenkins_home/plugins
