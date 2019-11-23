@@ -1,11 +1,11 @@
 # FROM ubuntu:16.04
-FROM python:3.7.5
+FROM openjdk:8-jdk
 # ENV http_proxy http://192.168.88.130:8118
 # ENV https_proxy http://192.168.88.130:8118
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
- default-jdk \
- python3-pip \
+ python \
+ python-pip \
  unzip \
  libx11-6 \
  libnss3 \
