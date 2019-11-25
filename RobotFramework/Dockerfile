@@ -16,19 +16,19 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # openjdk-8-jdk \
  && rm -rf /var/lib/apt/lists/*
 
-RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add - \
-  && echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
-  && apt-get update -qqy \
-  && apt-get -qqy install google-chrome-unstable \
-  && rm /etc/apt/sources.list.d/google-chrome.list \
-  && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
+RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -; \
+   echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
+   apt-get update -qqy \
+   apt-get -qqy install google-chrome-unstable \
+   rm /etc/apt/sources.list.d/google-chrome.list \
+   rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
 RUN CHROME_DRIVER_REMOTEPATH=$(wget -q -O - https://chromedriver.storage.googleapis.com | grep -oP '(?<=Key>)[^<]*' | grep chromedriver_linux64.zip | sort -Vr | head -1 ) \
-  && wget --no-verbose -O /tmp/chromedriver_linux64.zip https://chromedriver.storage.googleapis.com/$CHROME_DRIVER_REMOTEPATH \
-  && unzip /tmp/chromedriver_linux64.zip \
-  && rm /tmp/chromedriver_linux64.zip \
-  && chmod 755 /tmp/chromedriver \
-  && ln -fs /tmp/chromedriver /usr/bin/chromedriver
+   wget --no-verbose -O /tmp/chromedriver_linux64.zip https://chromedriver.storage.googleapis.com/$CHROME_DRIVER_REMOTEPATH \
+   unzip /tmp/chromedriver_linux64.zip \
+   rm /tmp/chromedriver_linux64.zip \
+   chmod 755 /tmp/chromedriver \
+   ln -fs /tmp/chromedriver /usr/bin/chromedriver
 
 RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools
