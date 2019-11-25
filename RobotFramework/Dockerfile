@@ -35,3 +35,4 @@ RUN apt-get update && apt-get install google-chrome-stable -y --force-yes
 ENV http_proxy ""
 ENV https_proxy ""
 
+CMD ["sleep","3600"]
